@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музика</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header, footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .music {
+            padding: 20px;
+        }
+        .music a {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            width: 200px;
+            border-radius: 5px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .music a::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s;
+        }
+        .music a:hover::after {
+            left: 100%;
+        }
+        .music a:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Лили Иванова</h1>
+        <nav>
+            <a href="index.html">Начало</a>
+            <a href="about.html">За Лили</a>
+            <a href="music.html">Музика</a>
+            <a href="gallery.html">Галерия</a>
+            <a href="contact.html">Контакт</a>
+        </nav>
+    </header>
+    
+    <div class="music">
+        <h2>Музика</h2>
+        <p>Насладете се на някои от най-добрите изпълнения на Лили Иванова:</p>
+        <a href="https://www.youtube.com/watch?v=X7Il6B0kkYM&list=PLxBVOrLJbZDy_39pK1HALknCSWkr5v6bH" target="_blank">Песен 1</a>
+        <a href="https://www.youtube.com/watch?v=7tSR_FgFClk&list=PLxBVOrLJbZDy_39pK1HALknCSWkr5v6bH&index=2" target="_blank">Песен 2</a>
+        <a href="https://www.youtube.com/watch?v=imM-c7YJ3Og&list=PLxBVOrLJbZDy_39pK1HALknCSWkr5v6bH&index=3" target="_blank">Песен 3</a>
+        <a href="https://www.youtube.com/watch?v=oH6rxFJaf50&list=PLxBVOrLJbZDy_39pK1HALknCSWkr5v6bH&index=9" target="_blank">Песен 4</a>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Всички права запазени.</p>
+    </footer>
+</body>
+</html>

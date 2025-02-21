@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лили Иванова</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header, footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .slideshow {
+            max-width: 100%;
+            display: flex;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 9s infinite;
+        }
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0%); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Лили Иванова</h1>
+        <nav>
+            <a href="index.html">Начало</a>
+            <a href="about.html">За Лили</a>
+            <a href="music.html">Музика</a>
+            <a href="gallery.html">Галерия</a>
+            <a href="contact.html">Контакт</a>
+        </nav>
+    </header>
+    
+    <div class="slideshow">
+        <div class="slides">
+            <img class="slide" src="https://trud.bg/storage/1339399/32_-_1_%D0%BB%D0%B8%D0%BB%D0%B8_1_7720698714130150592_original.jpg" alt="Слайд 1">
+            <img class="slide" src="https://bgmusic.tv/wp-content/uploads/2018/05/3.jpg"alt=Слайд 2">
+            <img class="slide" src="https://www.artvox.bg/wp-content/uploads/2020/04/Lili-Ivanova.jpg" alt="Слайд 3">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column">
+            <p>Лиля̀на Ивано̀ва Петро̀ва, по-известна като Лѝли Ивано̀ва, е българска поп певица.</p>
+            <p>От 1961 г. развива непрекъсната изпълнителска и концертна дейност, записва песни и албуми.</p>
+            <iframe width="679" height="382" src="https://www.youtube.com/embed/WCUsIQicUOI" title="Lili Ivanova - Vetrove (HeadBunny Tech House Remix)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="column">
+            <img src="https://trud.bg/storage/1339399/32_-_1_%D0%BB%D0%B8%D0%BB%D0%B8_1_7720698714130150592_original.jpg" alt="Лили Иванова">
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Всички права запазени.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header, footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .contact-form button {
+            background: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact-form button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Лили Иванова</h1>
+        <nav>
+            <a href="index.html">Начало</a>
+            <a href="about.html">За Лили</a>
+            <a href="music.html">Музика</a>
+            <a href="gallery.html">Галерия</a>
+            <a href="contact.html">Контакт</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <h2>Контакт</h2>
+        <p>Ако искате да се свържете с нас, попълнете формуляра по-долу.</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Вашето име" required>
+            <input type="email" name="email" placeholder="Вашият имейл" required>
+            <textarea name="message" rows="5" placeholder="Вашето съобщение" required></textarea>
+            <button type="submit">Изпрати</button>
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Всички права запазени.</p>
+    </footer>
+</body>
+</html>

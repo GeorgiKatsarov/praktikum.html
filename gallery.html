@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header, footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Лили Иванова</h1>
+        <nav>
+            <a href="index.html">Начало</a>
+            <a href="about.html">За Лили</a>
+            <a href="music.html">Музика</a>
+            <a href="gallery.html">Галерия</a>
+            <a href="contact.html">Контакт</a>
+        </nav>
+    </header>
+    
+    <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1lIA3nSia0WbLx9-K0muLLMV3lZ_MFk7NqQ&s" alt="Галерия 1">
+        <img src="https://glasnews.bg/news/2023/07/05/lili-ivanova-konchina-zaveshtanie-464.png" alt="Галерия 2">
+        <img src="https://smartfashionmedia.com/wp-content/uploads/2024/04/lili-ivanova-01.jpg" alt="Галерия 3">
+        <img src="https://img.cms.bweb.bg/media/images/640x360/Feb2019/2111814623.jpg" alt="Галерия 4">
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Всички права запазени.</p>
+    </footer>
+</body>
+</html>
