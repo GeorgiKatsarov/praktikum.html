@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерия</title>
+    <meta name="description" content="Галерия със снимки на Лили Иванова.">
+    <meta name="keywords" content="Лили Иванова, галерия, снимки, концерти">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
         body {
@@ -11,6 +13,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            background-color: #f5f5f5; /* Светъл фон за сайта */
         }
         header, footer {
             background: #2c3e50;
@@ -42,10 +45,11 @@
             height: auto;
             margin: 10px;
             border-radius: 5px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .gallery img:hover {
             transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>

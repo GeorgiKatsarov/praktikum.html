@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>За Лили Иванова</title>
+    <meta name="description" content="Официална страница за Лили Иванова, най-известната българска поп певица.">
+    <meta name="keywords" content="Лили Иванова, поп музика, българска музика, концерти, албуми">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
         body {
@@ -49,7 +52,9 @@
             cursor: pointer;
             text-align: left;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, max-height 0.3s ease;
+            overflow: hidden;
+            max-height: 50px;
         }
         .faq-answer {
             display: none;
@@ -60,6 +65,7 @@
         /* Цветове за персонализация */
         .faq-item.open {
             background-color: #bdc3c7; /* Променя цвета на въпроса, когато е отворен */
+            max-height: 200px;
         }
         .faq-item:hover {
             background-color: #95a5a6; /* Позиционирането на курсора променя цвета на въпроса */
@@ -68,15 +74,23 @@
     <script>
         // Функция за управление на отварянето на отговорите
         function toggleAnswer(event) {
-            const answer = event.target.nextElementSibling;
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-                event.target.classList.remove("open");
+            const faqItem = event.currentTarget;
+            const answer = faqItem.querySelector('.faq-answer');
+            if (faqItem.classList.contains('open')) {
+                answer.style.display = 'none';
+                faqItem.classList.remove('open');
             } else {
-                answer.style.display = "block";
-                event.target.classList.add("open");
+                answer.style.display = 'block';
+                faqItem.classList.add('open');
             }
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.addEventListener('click', toggleAnswer);
+            });
+        });
     </script>
 </head>
 <body>
@@ -101,19 +115,19 @@
 
         <!-- Q&A Секция -->
         <div class="faq-container">
-            <div class="faq-item" onclick="toggleAnswer(event)">
+            <div class="faq-item">
                 <strong>Кога започва музикалната кариера на Лили Иванова?</strong>
                 <div class="faq-answer">
                     Лили Иванова започва кариерата си през 1961 година, като бързо се утвърдява на българската музикална сцена.
                 </div>
             </div>
-            <div class="faq-item" onclick="toggleAnswer(event)">
+            <div class="faq-item">
                 <strong>Какъв е стилът на музиката на Лили Иванова?</strong>
                 <div class="faq-answer">
                     Стилът й включва поп, естрадни и джаз елементи, като тя е известна със своите силни и емоционални изпълнения.
                 </div>
             </div>
-            <div class="faq-item" onclick="toggleAnswer(event)">
+            <div class="faq-item">
                 <strong>Къде е изнасяла концерти Лили Иванова?</strong>
                 <div class="faq-answer">
                     Тя е изнасяла концерти не само в България, но и в редица други страни, включително в Европа, Русия и САЩ.
